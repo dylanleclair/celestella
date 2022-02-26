@@ -1,38 +1,37 @@
 ﻿using System;
+using UnityEngine;
 
-namespace heartflutter.States
+
+public class Climbing : PlayerState
 {
-    public class Climbing : PlayerState
+    public PlayerState HandleInput(GameObject player)
     {
-        public PlayerState HandleInput(Entity player)
-        {
 
 
-            // handle moving up
+        // handle moving up
 
-            // handle moving up onto an object?
+        // handle moving up onto an object?
 
-            // handle down
+        // handle down
 
-            // handle jump
+        // handle jump
 
-            throw new NotImplementedException();
-        }
+        throw new NotImplementedException();
+    }
 
-        public void OnEnter(Entity player)
-        {
-            var sprite = player.GetComponent<PrototypeSpriteRenderer>();
-            sprite.SetColor(Color.Red);
-        }
+    public void OnEnter(GameObject player)
+    {
+        //var sprite = player.GetComponent<PrototypeSpriteRenderer>();
+        //sprite.SetColor(Color.Red);
+    }
 
-        public void OnExit(Entity player)
-        {
-            throw new NotImplementedException();
-        }
+    public void OnExit(GameObject player)
+    {
+        throw new NotImplementedException();
+    }
 
-        public void Update(Entity player)
-        {
-            throw new NotImplementedException();
-        }
+    public void Update(GameObject player)
+    {
+        throw new NotImplementedException();
     }
 }

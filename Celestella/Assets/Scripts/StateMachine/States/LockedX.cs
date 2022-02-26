@@ -1,25 +1,24 @@
-﻿namespace heartflutter.States
+﻿using UnityEngine;
+
+public class LockedX : PlayerState
 {
-    public class LockedX : PlayerState
+    public virtual PlayerState HandleInput(GameObject player)
     {
-        public virtual PlayerState HandleInput(Entity player)
-        {
-            return null;
-        }
+        return null;
+    }
 
-        public virtual void OnEnter(Entity player)
-        {
+    public virtual void OnEnter(GameObject player)
+    {
 
-        }
+    }
 
-        public virtual void OnExit(Entity player)
-        {
+    public virtual void OnExit(GameObject player)
+    {
 
-        }
+    }
 
-        public virtual void Update(Entity player)
-        {
+    public virtual void Update(GameObject player)
+    {
 
-        }
     }
 }

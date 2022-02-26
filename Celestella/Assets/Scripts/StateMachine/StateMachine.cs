@@ -1,5 +1,4 @@
-using heartflutter.States;
-
+using UnityEngine;
 
 /// <summary>
 /// Stores each possible state.
@@ -21,8 +20,8 @@ public class StateMachine
 /// </summary>
 public interface PlayerState
 {
-    void OnEnter(PlayerController player);
-    void OnExit(PlayerController player);
-    PlayerState HandleInput(PlayerController player);
-    void Update(PlayerController player);
+    void OnEnter(GameObject player);
+    void OnExit(GameObject player);
+    PlayerState HandleInput(GameObject player);
+    void Update(GameObject player);
 }

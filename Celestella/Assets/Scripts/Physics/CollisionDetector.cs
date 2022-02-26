@@ -1,28 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Encapsulates everything a player might need.
+/// The enum tracking collision flags
 /// </summary>
-public class PlayerController : MonoBehaviour
+public enum CollisionFlags
 {
 
+}
 
-
-    /// <summary>
-    /// Tracks the state of the player
-    /// </summary>
-    StateMachine state;
-    
-
+public class CollisionDetector : MonoBehaviour
+{
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

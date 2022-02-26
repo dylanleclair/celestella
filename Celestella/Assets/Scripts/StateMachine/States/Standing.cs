@@ -1,31 +1,31 @@
-﻿namespace heartflutter.States
+﻿using UnityEngine;
+
+public class Standing : OnGround
 {
-    public class Standing : OnGround
+    public override PlayerState HandleInput(GameObject player)
     {
-        public override PlayerState HandleInput(Entity player)
+
+
+        if (Input.IsKeyPressed(Controls.Left) || Input.IsKeyPressed(Controls.Right))
         {
-
-
-            if (Input.IsKeyPressed(Controls.Left) || Input.IsKeyPressed(Controls.Right))
-            {
-                return StateMachine.running;
-            }
-            else
-                return base.HandleInput(player);
-
-
+            return StateMachine.running;
         }
+        else
+            return base.HandleInput(player);
 
-        public override void OnEnter(Entity player)
-        {
-            // update state color
-            var sprite = player.GetComponent<PrototypeSpriteRenderer>();
-            sprite.SetColor(Color.Black);
 
-            base.OnEnter(player);
+    }
 
-        }
+    public override void OnEnter(GameObject player)
+    {
+        // update state color
+        var sprite = player.GetComponent<PrototypeSpriteRenderer>();
+        sprite.SetColor(Color.Black);
+
+        base.OnEnter(player);
 
     }
 
 }
+
+
